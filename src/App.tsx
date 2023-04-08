@@ -1,10 +1,12 @@
 import React from 'react';
 import SimpleInput from './components/SimpleInput';
+import SimpleInputWithHooks from './components/SimpleInputWithHooks';
 
 function App() {
   return (
       <div className="app">
-        <SimpleInput />
+        {/* <SimpleInput /> */}
+        <SimpleInputWithHooks />
       </div>
     );
 }

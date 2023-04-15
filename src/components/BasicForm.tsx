@@ -1,5 +1,6 @@
 import { FormEvent } from "react";
 import useInput from "../hooks/use-input";
+import useInputRedeucer from "../hooks/use-input-reducer";
 
 const isNotEmpty = (value: string) => {
     return value.trim() !== "";
@@ -13,7 +14,8 @@ const validateEmail = (email: string) => {
 
 export default function BasicForm() {
 
-    const [firstNameValue, firstNameIsValid, firstNameInputHasError, firstNameChangeHandler, firstNameBlurHandler, resetFirstNameInput] = useInput(isNotEmpty);
+    const [firstNameValue, firstNameIsValid, firstNameInputHasError, firstNameChangeHandler, firstNameBlurHandler, resetFirstNameInput] = useInputRedeucer(isNotEmpty);
+    // const [firstNameValue, firstNameIsValid, firstNameInputHasError, firstNameChangeHandler, firstNameBlurHandler, resetFirstNameInput] = useInput(isNotEmpty);
     const [lastNameValue, lastNameIsValid, lastNameInputHasError, lastNameChangeHandler, lastNameBlurHandler, resetLastNameInput] = useInput(isNotEmpty);
     const [emailValue, emailIsValid, emailInputHasError, emailChangeHandler, emailBlurHandler, resetEmailInput] = useInput(validateEmail);
 
